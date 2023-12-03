@@ -1,0 +1,15 @@
+.experiences{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.col-1 div h1{
+    font-size: 40px;
+}
+.col-1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+} 

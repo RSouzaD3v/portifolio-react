@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 150px;
+}
+
+header .logo a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+}
+header nav ul li a img{
+    width: 28px;
+}
