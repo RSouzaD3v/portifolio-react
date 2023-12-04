@@ -14,9 +14,9 @@ export const Header = () => {
             <section className="nav-menu">
                 <nav>
                     <ul>
-                        <li><a href="#"><img src={github} alt="github" /></a></li>
-                        <li><a href="#"><img src={behance} alt="behance" /></a></li>
-                        <li><a href="#"><img src={linkedin} alt="likendin" /></a></li>
+                        <li><a target='_blank' href="https://github.com/RSouzaD3v"><img src={github} alt="github" /></a></li>
+                        <li><a target='_blank' href="https://www.behance.net/rafaelnascime83"><img src={behance} alt="behance" /></a></li>
+                        <li><a target='_blank' href="https://www.linkedin.com/in/rafael-francisco-022226255/"><img src={linkedin} alt="likendin" /></a></li>
                     </ul>
                 </nav>
             </section>
