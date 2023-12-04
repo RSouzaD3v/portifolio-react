@@ -1,6 +1,8 @@
 import { Experiences } from '../../components/Experiences';
+import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
 import { Intro } from '../../components/Intro';
+import { Projects } from '../../components/Projects';
 import './styles.css';
 
 function Home() {
@@ -9,6 +11,8 @@ function Home() {
       <Header />
       <Intro />
       <Experiences />
+      <Projects />
+      <Footer />
     </div>
   );
 }
