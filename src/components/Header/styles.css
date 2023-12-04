@@ -2,6 +2,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 20px 150px;
+    transition: 1s;
 }
 
 header .logo a{
@@ -26,3 +27,24 @@ header nav ul li a{
 header nav ul li a img{
     width: 28px;
 }
+
+
+@media screen and (max-width: 720px) {
+    header{
+        padding: 20px 25px;
+    }
+    
+    header .logo a{
+        font-size: 22px;
+    }
+    
+    header nav ul{
+        display: flex;
+        gap: 18px;
+    }
+      
+    header nav ul li a img{
+        width: 26px;
+    }
+}
+

@@ -6,10 +6,34 @@
 }
 .col-1 div h1{
     font-size: 40px;
+    transition: 1s;
 }
 .col-1{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     gap: 50px;
+    transition: 1s;
 } 
+
+
+@media screen and (max-width: 700px) {
+    .experiences{
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .col-1 div h1{
+        font-size: 20px;
+    }
+    .col-1 div p{
+        font-size: 8px;
+    }
+    .col-1{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 50px;
+    } 
+}

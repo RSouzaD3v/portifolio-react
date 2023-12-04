@@ -36,3 +36,31 @@ footer .textos-footer p{
     display: block;
     margin-bottom: 80px;
 }
+
+@media screen and (max-width: 700px) {
+    footer{
+        gap: 70px;
+    }
+    
+    footer .textos-footer h1{
+        font-size: 20px;
+    }
+    footer .textos-footer p{
+        font-size: 15px;
+    }
+    
+    .icones{
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        justify-content: center;
+    }
+    .icones img{
+        width: 30px;
+    }
+    
+    .lineFooter{
+        width: 200px;
+        margin-bottom: 60px;
+    }
+}
