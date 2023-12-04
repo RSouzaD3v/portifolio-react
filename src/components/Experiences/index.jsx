@@ -2,7 +2,7 @@ import './styles.css';
 
 export const Experiences = () => {
     return(
-        <section className='experiences'>
+        <section className='experiences' translate='no'>
             <div className='col-1'>
                 <div>
                     <h1>HTML</h1>
@@ -14,7 +14,7 @@ export const Experiences = () => {
                 </div>
                 <div>
                     <h1>B. de Dados</h1>
-                    <p>2 anos de experiência.</p>
+                    <p>1 ano de experiência.</p>
                 </div>
             </div>
 
@@ -25,11 +25,11 @@ export const Experiences = () => {
                 </div>
                 <div>
                     <h1>PHP</h1>
-                    <p>2 anos de experiência.</p>
+                    <p>1 ano de experiência.</p>
                 </div>
                 <div>
                     <h1>E. Hacker</h1>
-                    <p>2 anos de experiência.</p>
+                    <p>1 ano de experiência.</p>
                 </div>
             </div>
 
@@ -40,11 +40,11 @@ export const Experiences = () => {
                 </div>
                 <div>
                     <h1>Python</h1>
-                    <p>2 anos de experiência.</p>
+                    <p>1 anos de experiência.</p>
                 </div>
                 <div>
                     <h1>Java</h1>
-                    <p>2 anos de experiência.</p>
+                    <p>Formação incompleta</p>
                 </div>
             </div>
         </section>

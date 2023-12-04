@@ -19,7 +19,7 @@
     background-color: rgba(13, 164, 197, 0.3);
     backdrop-filter: blur(2px);
     top: 175px;
-    left: calc(50% - 285px);
+    left: calc(50% - 290px);
     position: absolute;
 }
 
@@ -43,11 +43,11 @@
 @media screen and (max-width: 700px) {
     
     .intro h1{
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .intro p{
-        font-size: 12px;
+        font-size: 10px;
     }
     .fullStackText{
         font-weight: bold;
@@ -63,13 +63,13 @@
 
     .intro h1::before{
         content: '';
-        width: 75px;
-        height: 75px;
+        width: 65px;
+        height: 65px;
         border-radius: 50%;
         background-color: rgba(13, 164, 197, 0.3);
         backdrop-filter: blur(2px);
-        top: 170px;
-        left: calc(50% - 190px);
+        top: 150px;
+        left: calc(50% - 170px);
         position: absolute;
     }
 }

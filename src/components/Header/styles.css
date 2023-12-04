@@ -31,20 +31,20 @@ header nav ul li a img{
 
 @media screen and (max-width: 720px) {
     header{
-        padding: 20px 25px;
+        padding: 10px;
     }
     
     header .logo a{
-        font-size: 22px;
+        font-size: 17px;
     }
     
     header nav ul{
         display: flex;
-        gap: 18px;
+        gap: 15px;
     }
       
     header nav ul li a img{
-        width: 26px;
+        width: 20px;
     }
 }
 

@@ -9,7 +9,7 @@ export const Projects = () => {
                 <a href="#">Contate-Me</a>
             </section>
 
-            <section className='cards'>
+            <section className='cards' translate='no'>
                 <section className='card'>
                     <div className='card-img'>
                         <img src={rickSanchez} alt="" />
