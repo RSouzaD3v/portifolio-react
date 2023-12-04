@@ -11,9 +11,9 @@ export const Footer = () => {
                 <p>Deixe-me ajudar com seu projeto.</p>
             </div>
             <div className="icones">
-                <a target='_blank' href="https://github.com/RSouzaD3v"><img src={github} alt="" /></a>
-                <a target='_blank' href="https://www.behance.net/rafaelnascime83"><img src={behance} alt="" /></a>
-                <a target='_blank' href="https://www.linkedin.com/in/rafael-francisco-022226255/"><img src={linkedin} alt="" /></a>
+                <a target='_blank' rel="noreferrer" href="https://github.com/RSouzaD3v"><img src={github} alt="" /></a>
+                <a target='_blank' rel="noreferrer" href="https://www.behance.net/rafaelnascime83"><img src={behance} alt="" /></a>
+                <a target='_blank' rel="noreferrer" href="https://www.linkedin.com/in/rafael-francisco-022226255/"><img src={linkedin} alt="" /></a>
             </div>
             <span className='lineFooter'></span>
         </footer>
