@@ -7,6 +7,13 @@
   font-family: 'Inter', sans-serif;
 }
 
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgba(13, 164, 197, 1);
+}
+
 body, html {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
