@@ -1,50 +1,60 @@
 import './styles.css';
+import htmlIcon from './svg/html.svg';
+import css from './svg/css.svg';
+import js from './svg/js.svg';
+import php from './svg/php.svg';
+import python from './svg/python.svg';
+import java from './svg/java.svg';
+import banco from './svg/database.svg';
+import hacker from './svg/hacker.svg';
+import react from './svg/react.svg';
 
 export const Experiences = () => {
+
     return(
         <section className='experiences' translate='no'>
             <div className='col-1'>
                 <div>
-                    <h1>HTML</h1>
-                    <p>2 anos de experiência.</p>
+                    <img src={htmlIcon} alt="" />
+                    <p>HTML</p>
                 </div>
                 <div>
-                    <h1>React</h1>
-                    <p>2 anos de experiência.</p>
+                    <img src={php} alt="" />
+                    <p>PHP</p>
                 </div>
                 <div>
-                    <h1>B. de Dados</h1>
-                    <p>1 ano de experiência.</p>
-                </div>
-            </div>
-
-            <div className='col-1'>
-                <div>
-                    <h1>CSS</h1>
-                    <p>2 anos de experiência.</p>
-                </div>
-                <div>
-                    <h1>PHP</h1>
-                    <p>1 ano de experiência.</p>
-                </div>
-                <div>
-                    <h1>E. Hacker</h1>
-                    <p>1 ano de experiência.</p>
+                    <img src={banco} alt="" />
+                    <p>Database</p>
                 </div>
             </div>
 
             <div className='col-1'>
                 <div>
-                    <h1>Javascript</h1>
-                    <p>2 anos de experiência.</p>
+                    <img src={css} alt="" />
+                    <p>CSS</p>
                 </div>
                 <div>
-                    <h1>Python</h1>
-                    <p>1 anos de experiência.</p>
+                    <img src={python} alt="" />
+                    <p>Python</p>
                 </div>
                 <div>
-                    <h1>Java</h1>
-                    <p>Formação incompleta</p>
+                    <img src={hacker} alt="" />
+                    <p>Ethical Hacker</p>
+                </div>
+            </div>
+
+            <div className='col-1'>
+                <div>
+                    <img src={js} alt="" />
+                    <p>Javascript</p>
+                </div>
+                <div>
+                    <img src={java} alt="" />
+                    <p>Java</p>
+                </div>
+                <div>
+                    <img src={react} alt="" />
+                    <p>React Js</p>
                 </div>
             </div>
         </section>

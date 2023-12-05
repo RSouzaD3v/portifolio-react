@@ -3,7 +3,7 @@ import { Cards } from "../cards";
 import rickSanchez from './rickSanchez.jpg';
 import { useState } from 'react';
 
-export const Projects = () => {
+export const Projects = ({thema}) => {
     const [ projetosCards ] = useState([
         {
             id: 1,
@@ -95,7 +95,7 @@ export const Projects = () => {
             }
             </section>
 
-            <button onClick={handleClick} className='btnMais'>{textoBtn}</button>
+            <button onClick={handleClick} className={'btnMais' + ' ' + thema}>{textoBtn}</button>
         </section>
     );
 }

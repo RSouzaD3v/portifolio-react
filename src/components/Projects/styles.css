@@ -40,6 +40,9 @@ button{
     border-radius: 10px;
     cursor: pointer;
 }
+button.red{
+    background-color: red;
+}
 
 
 

@@ -3,7 +3,7 @@ import github from '../Header/svg/github.svg';
 import behance from '../Header/svg/behance.svg';
 import linkedin from '../Header/svg/linkedin.svg';
 
-export const Footer = () => {
+export const Footer = ({thema}) => {
     return(
         <footer>
             <div className='textos-footer'>
@@ -15,7 +15,7 @@ export const Footer = () => {
                 <a target='_blank' rel="noreferrer" href="https://www.behance.net/rafaelnascime83"><img src={behance} alt="" /></a>
                 <a target='_blank' rel="noreferrer" href="https://www.linkedin.com/in/rafael-francisco-022226255/"><img src={linkedin} alt="" /></a>
             </div>
-            <span className='lineFooter'></span>
+            <span className={'lineFooter' + ' ' + thema}></span>
         </footer>
     );
 }
