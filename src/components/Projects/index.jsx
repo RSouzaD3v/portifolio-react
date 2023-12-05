@@ -1,7 +1,7 @@
 import './styles.css'
 import { Cards } from "../cards";
 import rickSanchez from './rickSanchez.jpg';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export const Projects = () => {
     const [ projetosCards ] = useState([
@@ -44,7 +44,9 @@ export const Projects = () => {
         const { value } = e.target;
         setSearchValue(value);
         if(value === ""){
-            setProjetosFakes(projetosCards);
+            setPage(0)
+            setPagePerPage(2)
+            setProjetosFakes(projetosCards.slice(page, pagePerpage))
         }else{
             filtragem();
         }
@@ -60,20 +62,18 @@ export const Projects = () => {
 
     const handleClick = () => {
         setPagePerPage(4);
-        setProjetosFakes(projetosCards.slice(0, pagePerpage))
+        setProjetosFakes(projetosCards.slice(page, pagePerpage))
         if(pagePerpage === 4){
             setPagePerPage(2);
             setTextoBtn("Ver menos")
         }else{
+            setPage(0);
             setPagePerPage(4);
-            setProjetosFakes(projetosCards.slice(0, pagePerpage))
+            setProjetosFakes(projetosCards.slice(page, pagePerpage))
             setTextoBtn("Ver todos os projetos");
         }
     }
 
-    useEffect(() => {
-        handleClick();
-    }, []);
 
     return(
         <section className="projects">
@@ -88,6 +88,7 @@ export const Projects = () => {
             {
                 projetosFake.map(onlyCard => (
                     <Cards
+                        key={onlyCard.id}
                         onlyCard={onlyCard}
                     />
                 ))

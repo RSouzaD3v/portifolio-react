@@ -8,7 +8,7 @@ export const Header = () => {
     return(
         <header>
             <section className="logo">
-                <a href="">RafaelF.Souza</a>
+                <a href="https://github.com/RSouzaD3v">RafaelF.Souza</a>
             </section>
 
             <section className="nav-menu">
