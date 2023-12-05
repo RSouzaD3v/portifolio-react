@@ -1,47 +1,100 @@
 import './styles.css'
+import { Cards } from "../cards";
 import rickSanchez from './rickSanchez.jpg';
+import { useEffect, useState } from 'react';
 
 export const Projects = () => {
+    const [ projetosCards ] = useState([
+        {
+            id: 1,
+            typeSite: "WebSite",
+            used: "Html Css Javascript",
+            image: rickSanchez
+        },
+        {
+            id: 2,
+            typeSite: "Lading Page",
+            used: "Html Css",
+            image: rickSanchez
+        },
+        {
+            id: 3,
+            typeSite: "WebApp",
+            used: "Html Css Javascript",
+            image: rickSanchez
+        },
+        {
+            id: 4,
+            typeSite: "E-Commerce",
+            used: "Java",
+            image: rickSanchez
+        }
+    ])
+
+    const [ page, setPage ] = useState(0);
+    const [ pagePerpage, setPagePerPage ] = useState(2);
+
+    const [ projetosFake, setProjetosFakes ] = useState(projetosCards.slice(page, pagePerpage));
+
+    const [ searchValue, setSearchValue ] = useState("");
+    const [ textoBtn, setTextoBtn ] = useState("Ver Todos os Projetos");
+
+
+    const handleChange = (e) => {
+        const { value } = e.target;
+        setSearchValue(value);
+        if(value === ""){
+            setProjetosFakes(projetosCards);
+        }else{
+            filtragem();
+        }
+    }
+
+    const filtragem = () => {
+        const filteredCard = projetosCards.filter((el) => el.typeSite.toLowerCase()
+        .includes(searchValue.toLowerCase()));
+
+        setProjetosFakes(filteredCard);
+    }
+
+
+    const handleClick = () => {
+        setPagePerPage(4);
+        setProjetosFakes(projetosCards.slice(0, pagePerpage))
+        if(pagePerpage === 4){
+            setPagePerPage(2);
+            setTextoBtn("Ver menos")
+        }else{
+            setPagePerPage(4);
+            setProjetosFakes(projetosCards.slice(0, pagePerpage))
+            setTextoBtn("Ver todos os projetos");
+        }
+    }
+
+    useEffect(() => {
+        handleClick();
+    }, []);
+
     return(
         <section className="projects">
             <section className='header-projects'>
                 <h1>Projetos</h1>
-                <a href="#">Contate-Me</a>
+                <div className="search">
+                    <input onChange={handleChange} type="search" name="searchInput" id="searchInput" placeholder='Procurar Projeto...' />
+                </div>
             </section>
 
             <section className='cards' translate='no'>
-                <section className='card'>
-                    <div className='card-img'>
-                        <img src={rickSanchez} alt="" />
-                    </div>
-                    <h1>WebSite</h1>
-                    <p>Html Css Javascript</p>
-                </section>
-
-                <section className='card'>
-                    <div className='card-img'>
-                        <img src={rickSanchez} alt="" />
-                    </div>
-                    <h1>WebSite</h1>
-                    <p>Html Css Javascript</p>
-                </section>
-
-                <section className='card'>
-                    <div className='card-img'>
-                        <img src={rickSanchez} alt="" />
-                    </div>
-                    <h1>WebSite</h1>
-                    <p>Html Css Javascript</p>
-                </section>
-
-                <section className='card'>
-                    <div className='card-img'>
-                        <img src={rickSanchez} alt="" />
-                    </div>
-                    <h1>WebSite</h1>
-                    <p>Html Css Javascript</p>
-                </section>
+            {
+                projetosFake.map(onlyCard => (
+                    <Cards
+                        onlyCard={onlyCard}
+                    />
+                ))
+            }
             </section>
+
+            <button onClick={handleClick} className='btnMais'>{textoBtn}</button>
         </section>
     );
 }
