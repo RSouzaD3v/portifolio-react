@@ -1,13 +1,19 @@
-import './styles.css'
+import React, { useEffect, useState } from 'react';
+import P from 'prop-types';
+
 import { Cards } from "../cards";
+
+import './styles.css';
+
+//< Imagens >
 import bsi from './beautystyleisalena.png';
 import bsi2 from './bsi.png';
 import imc from './imc.png';
 import cryptoWeb from './cryptoWeb.png';
-import { useEffect, useState } from 'react';
-import React from 'react';
+// < /Imagens >
 
 export const Projects = () => {
+
     const [ projetosCards ] = useState([
         {
             id: 1,
@@ -31,7 +37,7 @@ export const Projects = () => {
             url: 'https://rsouzad3v.github.io/imc/'
         },
         {
-            id: 3,
+            id: 4,
             typeSite: "Web3 - Front End",
             used: "Html Css Javascript",
             image: cryptoWeb,
@@ -48,21 +54,18 @@ export const Projects = () => {
     const handleChange = (e) => {
         const { value } = e.target;
         setSearchValue(value);
-        if(value === ""){
+        if(!value){
             setPage(0)
             setPagePerPage(2)
             setProjetosArray(projetosCards.slice(page, pagePerpage))
         }else{
-            filtragem();
+            let filteredCard = projetosCards.filter((el) => el.typeSite.toLowerCase()
+            .includes(searchValue.toLowerCase()));
+    
+            setProjetosArray(filteredCard);
         }
     }
 
-    const filtragem = () => {
-        const filteredCard = projetosCards.filter((el) => el.typeSite.toLowerCase()
-        .includes(searchValue.toLowerCase()));
-
-        setProjetosArray(filteredCard);
-    }
 
 
     const handleClick = () => {
@@ -81,6 +84,7 @@ export const Projects = () => {
 
     useEffect(() => {
         handleClick();
+
     }, [])
 
 
@@ -108,4 +112,8 @@ export const Projects = () => {
             <button onClick={handleClick} className='btnMais'>{textoBtn}</button>
         </section>
     );
+}
+
+Cards.propTypes = {
+    onlyCard: P.object.isRequired,
 }
