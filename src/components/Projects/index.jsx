@@ -1,41 +1,46 @@
 import './styles.css'
 import { Cards } from "../cards";
-import rickSanchez from './rickSanchez.jpg';
-import { useState } from 'react';
+import bsi from './beautystyleisalena.png';
+import bsi2 from './bsi.png';
+import imc from './imc.png';
+import cryptoWeb from './cryptoWeb.png';
+import { useEffect, useState } from 'react';
+import React from 'react';
 
-export const Projects = ({thema}) => {
+export const Projects = () => {
     const [ projetosCards ] = useState([
         {
             id: 1,
-            typeSite: "WebSite",
+            typeSite: "Lading Page",
             used: "Html Css Javascript",
-            image: rickSanchez
+            image: bsi,
+            url: 'https://rsouzad3v.github.io/beautystyleisalena/'
         },
         {
             id: 2,
             typeSite: "Lading Page",
-            used: "Html Css",
-            image: rickSanchez
+            used: "Html Css Javascript",
+            image: bsi2,
+            url: 'https://rsouzad3v.github.io/bsi/'
         },
         {
             id: 3,
-            typeSite: "WebApp",
+            typeSite: "Lógica",
             used: "Html Css Javascript",
-            image: rickSanchez
+            image: imc,
+            url: 'https://rsouzad3v.github.io/imc/'
         },
         {
-            id: 4,
-            typeSite: "E-Commerce",
-            used: "Java",
-            image: rickSanchez
+            id: 3,
+            typeSite: "Web3 - Front End",
+            used: "Html Css Javascript",
+            image: cryptoWeb,
+            url: 'https://rsouzad3v.github.io/cryptoWeb/'
         }
-    ])
-
+    ]);
     const [ page, setPage ] = useState(0);
     const [ pagePerpage, setPagePerPage ] = useState(2);
-
-    const [ projetosFake, setProjetosFakes ] = useState(projetosCards.slice(page, pagePerpage));
-
+    const [ projetosArray, setProjetosArray ] = useState(projetosCards.slice(page, pagePerpage));
     const [ searchValue, setSearchValue ] = useState("");
     const [ textoBtn, setTextoBtn ] = useState("Ver Todos os Projetos");
 
@@ -46,7 +51,7 @@ export const Projects = ({thema}) => {
         if(value === ""){
             setPage(0)
             setPagePerPage(2)
-            setProjetosFakes(projetosCards.slice(page, pagePerpage))
+            setProjetosArray(projetosCards.slice(page, pagePerpage))
         }else{
             filtragem();
         }
@@ -56,23 +61,27 @@ export const Projects = ({thema}) => {
         const filteredCard = projetosCards.filter((el) => el.typeSite.toLowerCase()
         .includes(searchValue.toLowerCase()));
 
-        setProjetosFakes(filteredCard);
+        setProjetosArray(filteredCard);
     }
 
 
     const handleClick = () => {
         setPagePerPage(4);
-        setProjetosFakes(projetosCards.slice(page, pagePerpage))
+        setProjetosArray(projetosCards.slice(page, pagePerpage))
+
         if(pagePerpage === 4){
             setPagePerPage(2);
             setTextoBtn("Ver menos")
         }else{
-            setPage(0);
             setPagePerPage(4);
-            setProjetosFakes(projetosCards.slice(page, pagePerpage))
-            setTextoBtn("Ver todos os projetos");
+            setProjetosArray(projetosCards.slice(page, pagePerpage))
+            setTextoBtn("Ver Todos os Projetos");
         }
     }
+
+    useEffect(() => {
+        handleClick();
+    }, [])
 
 
     return(
@@ -86,16 +95,17 @@ export const Projects = ({thema}) => {
 
             <section className='cards' translate='no'>
             {
-                projetosFake.map(onlyCard => (
+                projetosArray.map(onlyCard => (
                     <Cards
                         key={onlyCard.id}
                         onlyCard={onlyCard}
                     />
+
                 ))
             }
             </section>
 
-            <button onClick={handleClick} className={'btnMais' + ' ' + thema}>{textoBtn}</button>
+            <button onClick={handleClick} className='btnMais'>{textoBtn}</button>
         </section>
     );
 }

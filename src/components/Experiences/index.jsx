@@ -7,7 +7,8 @@ import python from './svg/python.svg';
 import java from './svg/java.svg';
 import banco from './svg/database.svg';
 import hacker from './svg/hacker.svg';
-import react from './svg/react.svg';
+import rea from './svg/react.svg';
+import React from 'react';
 
 export const Experiences = () => {
 
@@ -53,7 +54,7 @@ export const Experiences = () => {
                     <p>Java</p>
                 </div>
                 <div>
-                    <img src={react} alt="" />
+                    <img src={rea} alt="" />
                     <p>React Js</p>
                 </div>
             </div>

@@ -6,10 +6,26 @@
     transition: 1s;
 }
 
+.linkCard{
+    max-width: 496px;
+    max-height: 471px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    filter: grayscale(100%);
+}
+.linkCard:hover{
+    text-align: center;
+    transition: 0.5s all;
+    transform: scale(1.03);
+    filter: grayscale(0%);
+}
+
 .card{
     max-width: 496px;
     max-height: 471px;
     overflow: hidden;
+    border-radius: 10px;
 }
 .card.hide{
     display: none;

@@ -1,6 +1,8 @@
 import github from './svg/github.svg';
 import behance from './svg/behance.svg';
 import linkedin from './svg/linkedin.svg';
+// import setting from './svg/setting.svg';
+import React from 'react';
 
 import './styles.css';
 
@@ -17,6 +19,7 @@ export const Header = () => {
                         <li><a target='_blank' rel="noreferrer" href="https://github.com/RSouzaD3v"><img src={github} alt="github" /></a></li>
                         <li><a target='_blank' rel="noreferrer" href="https://www.behance.net/rafaelnascime83"><img src={behance} alt="behance" /></a></li>
                         <li><a target='_blank' rel="noreferrer" href="https://www.linkedin.com/in/rafael-francisco-022226255/"><img src={linkedin} alt="likendin" /></a></li>
+                        {/* <li><img src={setting} alt="config" /></li> */}
                     </ul>
                 </nav>
             </section>

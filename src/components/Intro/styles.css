@@ -22,15 +22,6 @@
     left: calc(50% - 290px);
     position: absolute;
 }
-/* MODE THEME */
-.ball.red{
-    background-color: rgba(255, 0, 0, 0.3);
-}
-.myName.red{
-    text-decoration: underline red;
-}
-
-/* MODE THEME */
 
 .intro p{
     font-size: 20px;

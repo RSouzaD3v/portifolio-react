@@ -2,8 +2,9 @@ import './styles.css';
 import github from '../Header/svg/github.svg';
 import behance from '../Header/svg/behance.svg';
 import linkedin from '../Header/svg/linkedin.svg';
+import React from 'react';
 
-export const Footer = ({thema}) => {
+export const Footer = () => {
     return(
         <footer>
             <div className='textos-footer'>
@@ -15,7 +16,7 @@ export const Footer = ({thema}) => {
                 <a target='_blank' rel="noreferrer" href="https://www.behance.net/rafaelnascime83"><img src={behance} alt="" /></a>
                 <a target='_blank' rel="noreferrer" href="https://www.linkedin.com/in/rafael-francisco-022226255/"><img src={linkedin} alt="" /></a>
             </div>
-            <span className={'lineFooter' + ' ' + thema}></span>
+            <span className='lineFooter'></span>
         </footer>
     );
 }
